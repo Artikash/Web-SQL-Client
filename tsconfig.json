@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"module": "es6",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"target": "es5",
+		"jsx": "react",
+		"jsxFactory": "h",
+		"sourceMap": true
+	},
+	"include": ["./src/main/typescript/*"]
+}
