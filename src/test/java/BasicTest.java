@@ -1,11 +1,7 @@
-package main;
-
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.springframework.test.context.ContextConfiguration;
-
-import main.Application;
 
 @ContextConfiguration
 public class BasicTest {
