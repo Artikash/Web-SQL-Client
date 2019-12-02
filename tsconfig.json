@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"strict": true,
+		"noImplicitThis": true,
 		"module": "es6",
 		"allowJs": true,
 		"moduleResolution": "node",
@@ -9,5 +10,5 @@
 		"jsxFactory": "h",
 		"sourceMap": true
 	},
-	"include": ["./src/main/typescript/*"]
+	"include": ["./src/**/typescript/*"]
 }

@@ -1,3 +1,5 @@
+// TODO: figure out how to actually test my controller
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
@@ -8,10 +10,5 @@ public class BasicTest {
 	@Test
 	public void LanguageTest() {
 		assertEquals("Five", "Fi" + "ve");
-	}
-
-	@Test
-	public void ClassTest() {
-		assertEquals(Application.Add(3, 4), 7);
 	}
 }
