@@ -35,7 +35,7 @@
 	</dependencies>
 
 	<properties>
-		<java.version>1.12</java.version>
+		<java.version>1.11</java.version>
 	</properties>
 
 	<build>
@@ -49,7 +49,7 @@
   				<artifactId>maven-compiler-plugin</artifactId>
    				<version>3.8.0</version>
    				<configuration>
-	   				<release>12</release>
+	   				<release>11</release>
    				</configuration>
 			</plugin>
 		</plugins>
