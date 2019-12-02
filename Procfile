@@ -1,1 +1,2 @@
-npm run build; mvn package
+npm run build
+web: mvn package
