@@ -40,7 +40,6 @@ public final class ConnectionProvider {
 
 	@PostMapping("/api/connect")
 	public String addConnection(@RequestBody final SerializedConnectionParams params) {
-		for (var driver : java.util.Collections.list(java.sql.DriverManager.getDrivers())) System.out.println(driver.getClass().getName());
 		final String connectionId = UUID.randomUUID().toString();
 		try {
 			connections.put(connectionId, new ExpiringConnection(getConnection(params.jdbcUrl), params.timeout));
