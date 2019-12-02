@@ -50,6 +50,7 @@
    				<version>3.8.0</version>
    				<configuration>
 	   				<release>11</release>
+					<compilerArgs>-parameters</compilerArgs>
    				</configuration>
 			</plugin>
 		</plugins>
