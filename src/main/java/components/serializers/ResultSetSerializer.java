@@ -34,8 +34,8 @@ public final class ResultSetSerializer extends JsonSerializer<ResultSet> {
 				jsonGenerator.writeStartObject();
 				for (int i = 0; i < columnCount; ++i) {
 					try {
-						jsonGenerator.writeFieldName(columnNames.get(i));
 						final var column = resultSet.getObject(i + 1);
+						jsonGenerator.writeFieldName(columnNames.get(i));
 						if (column != null) {
 							final var serializer = serializerProvider.findValueSerializer(column.getClass());
 							serializer.serialize(column, jsonGenerator, serializerProvider);
