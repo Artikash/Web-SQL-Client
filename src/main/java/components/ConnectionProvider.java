@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.sql.rowset.RowSetProvider;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -22,6 +23,7 @@ import components.serializers.SerializedConnectionParams;
 import components.serializers.SerializedQueryParams;
 
 @RestController
+@CrossOrigin
 public final class ConnectionProvider {
 	public ConnectionProvider() {
 		new Thread(() -> {
