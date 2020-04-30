@@ -42,9 +42,12 @@ public final class ConnectionProvider {
 
 	@PostMapping("/api/connect")
 	public String addConnection(@RequestBody final SerializedConnectionParams params) {
-		final String connectionId = UUID.randomUUID().toString();
+		final var connectionId = UUID.randomUUID().toString();
 		try {
-			connections.put(connectionId, new ExpiringConnection(getConnection(params.jdbcUrl), params.timeout));
+			connections.put(connectionId, new ExpiringConnection(
+				getConnection(params.jdbcUrl, params.username.orElse(null), params.password.orElse(null)),
+				params.timeout
+			));
 		} catch (final SQLException e) {
 			throw new BadRequest(e);
 		}
